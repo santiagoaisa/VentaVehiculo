@@ -25,13 +25,49 @@
   	<input type="reset" onclick="registrarCliente()" value="Registrar">
   </form>
 <br>
-   	<table border=1 id="tablaCliente" >
+   	<table border=1 id="tablaVehiculo" >
     	<tr>
     		<th>Nombre</th>
     		<th>DNI</th>
     		<th>Acción</th>
     	</tr>    	
-    </table>
+	</table>
+	<form>
+		<table >
+			<tr>
+				<td><label>Ingresar color:</label></td>
+				<td><input id="color" type="text" name=""></td>
+			</tr>
+			<tr><td><label>Ingresar placa:</label></td>
+				<td><input id="placa" type="text" name=""></td>
+			</tr>
+			<tr><td><label>Ingresar tipo:</label></td>
+				<td><input id="tipo" type="text" name=""></td>
+			</tr>
+			<tr><td><label>Ingresar ano:</label></td>
+				<td><input id="ano" type="text" name=""></td>
+			</tr>
+			<tr><td><label>Ingresar cilindraje:</label></td>
+				<td><input id="cilindraje" type="text" name=""></td>
+			</tr>
+			<tr><td><label>Ingresar potencia:</label></td>
+				<td><input id="potencia" type="text" name=""></td>
+			</tr>
+			
+		</table>
+		<br>
+		<input type="reset" onclick="registrarVehiculo()" value="Registrar">
+	</form>
+  <br>
+		 <table border=1 id="tablaCliente" >
+		  <tr>
+			  <th>color</th>
+			  <th>placa</th>
+			  <th>ano</th>
+			  <th>cilindraje</th>
+			  <th>potencia</th>
+		  </tr>    	
+	  </table>
 
     
 </body>
