@@ -48,7 +48,7 @@ function modificarCliente(cdni){
 }
 
 function mostrarClienteRegistrado(cliente){
-    document.getElementById("tablaCliente").innerHTML+=`<tbody><td>${cliente.obtenerNombre()}</td> <td>${cliente.obtenerDni()}</td> <button onclick="modificarCliente('${cliente.obtenerDni()}')" >Modificar</button> </td> <td><button onclick="eliminarCliente('${cliente.obtenerDni()}')" >Eliminar</button>  </tbody> `;
+    document.getElementById("tablaCliente").innerHTML+=`<tbody><td>${cliente.obtenerNombre()}</td> <td>${cliente.obtenerDni()}</td> <td> <button onclick="modificarCliente('${cliente.obtenerDni()}')" >Modificar</button>  <button onclick="eliminarCliente('${cliente.obtenerDni()}')" >Eliminar</button>  </td> </tbody> `;
 
 }
 
