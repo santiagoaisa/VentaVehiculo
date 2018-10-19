@@ -6,22 +6,40 @@ function registrarCliente(){
     let nombreCliente=document.getElementById("nombrecliente").value;
     let dniCliente=document.getElementById("dnicliente").value; 
 
-    mostrarClienteRegistrado();
+
+    if(validarCliente(dniCliente)){
+
+            alert("DNI Duplicado");
+
+        return ;
+    }
+
+
+    let cliente=new Cliente();
+    cliente.cambiarNombre(nombreCliente);
+    cliente.cambiarDni(dniCliente);
+
+
+
+    mostrarClienteRegistrado(cliente);
+    
 }
 
 function eliminarCliente(){
     alert("Eliminado");
 }
 
-function mostrarClienteRegistrado(){
+function mostrarClienteRegistrado(cliente){
 
-    document.getElementById("tablaCliente").innerHTML+=`<tbody><td>Apellido</td> <td>Nombre</td> <td><a href="eliminarCliente()" >Eliminar</a> </td> </tbody> `;
+    document.getElementById("tablaCliente").innerHTML+=`<tbody><td>${cliente.obtenerNombre()}</td> <td>${cliente.obtenerDni()}</td> <td><a href="eliminarCliente()" >Eliminar</a> </td> </tbody> `;
 
 }
 
-function validarUsuario(){
+function validarCliente(cdni){
 
+    let resultado=listaClientes.filter( dni => dni===cdni  );
     
+    return resultado.length>0;
 
 }
 
