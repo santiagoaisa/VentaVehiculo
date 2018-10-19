@@ -19,9 +19,9 @@ function Vehiculo(co,pla,ti,anio,cili,po)
 	{
 		return this.tipo;
 	};
-	this.obtenerAño = function ()
+	this.obtenerAno = function ()
 	{
-		return this.año;
+		return this.ano;
 	};
 	this.obtenerCilindraje = function ()
 	{
@@ -43,9 +43,9 @@ function Vehiculo(co,pla,ti,anio,cili,po)
 	{
 		 this.tipo = nuevoTipo;	
 	};
-	this.cambiarAño = function (nuevoAño)
+	this.cambiarAno = function (nuevoAno)
 	{
-		 this.año = nuevoAño;	
+		 this.ano = nuevoAno;	
 	};
 	this.cambiarCilindraje = function (nuevoCilindraje)
 	{
@@ -120,9 +120,9 @@ function Factura(fe,pre,num,c,v)
 	{
 		return this.vehi.obtenerTipo();
 	}
-	this.obtenerVehiculoAño = function () 
+	this.obtenerVehiculoAno = function () 
 	{
-		return this.vehi.obtenerAño();
+		return this.vehi.obtenerAno();
 	}
 	this.obtenerVehiculoCilindraje = function ()
 	 {
@@ -180,7 +180,7 @@ var factura1 = new Factura("19/10/2018","$9000","3676589845",cliente1,vehiculo1)
 console.log(vehiculo1.obtenerColor());
 console.log(vehiculo1.obtenerPlaca());
 console.log(vehiculo1.obtenerTipo());
-console.log(vehiculo1.obtenerAño());
+console.log(vehiculo1.obtenerAno());
 console.log(vehiculo1.obtenerCilindraje());
 console.log(vehiculo1.obtenerPotencia());
 console.log(cliente1.obtenerNombre());
@@ -193,6 +193,6 @@ console.log(factura1.obtenerClienteDni());
 console.log(factura1.obtenerVehiculoColor());
 console.log(factura1.obtenerVehiculoPlaca());
 console.log(factura1.obtenerVehiculoTipo());
-console.log(factura1.obtenerVehiculoAño());
+console.log(factura1.obtenerVehiculoAno());
 console.log(factura1.obtenerVehiculoCilindraje());
 console.log(factura1.obtenerVehiculoPotencia());

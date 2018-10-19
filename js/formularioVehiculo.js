@@ -12,19 +12,14 @@ function registrarVehiculo(){
 
     if(validarVehiculo(placa)){
 
-        alert("DNI Duplicado");
+        alert("PLACA DUPLICADA");
 
         //si esta duplicado ya no continua
          return ;
     }
 
-    let vehiculo=new Vehiculo();
-    color.cambiarColor(color);
-    placa.cambiarPlaca(placa);
-    tipo.cambiarTipo(tipo);
-    ano.cambiarAno(ano);
-    cilindraje.cambiarCilindraje(cilindraje);
-    potencia.cambiarPotencia(potencia);
+    let vehiculo=new Vehiculo(color,placa,tipo,ano,cilindraje,potencia);
+   
 
     baseVehiculo.push(vehiculo);
 
@@ -35,14 +30,25 @@ function eliminarvehiculo(){
     alert("Eliminado");
 }
 
-function mostrarVehiculoRegistrado(Vehiculo){
-    document.getElementById("tablaVehiculo").innerHTML+=`<tbody><td>${vehiculo.obtenercolor()}</td> <td>${vehiculo.obtenerplaca()}</td> <td>${vehiculo.obtenertipo()}</td> <td>${vehiculo.obtenerano()}</td> <td>${vehiculo.obtenercilindraje()}</td> <td>${vehiculo.obtenerpotencia()}</td> <td><a href="eliminarVehiculo()" >Eliminar</a> </td> </tbody> `;
+function mostrarVehiculoRegistrado(vehiculo){
+    document.getElementById("tablaVehiculo").innerHTML+=`<tbody><td>${vehiculo.obtenerColor()}</td> <td>${vehiculo.obtenerPlaca()}</td> <td>${vehiculo.obtenerTipo()}</td> <td>${vehiculo.obtenerAno()}</td> <td>${vehiculo.obtenerCilindraje()}</td> <td>${vehiculo.obtenerPotencia()}</td> <td><a href="eliminarVehiculo()" >Eliminar</a> </td> </tbody> `;
 
+}
+function modificarVehiculo(cplaca){
+    
+    for (const vehiculo of baseVehiculo) {        
+        if(vehiculo.obtenerPlaca()==cplaca){
+            document.getElementById("nombrecliente").value=cliente.obtenerNombre();
+            document.getElementById("dnicliente").value=cliente.obtenerDni();            
+            document.getElementById("dnicliente").disabled = true;
+            break;
+        }
+    }    
 }
 
 function validarVehiculo(cplaca){   
 
-    let resultado=baseVehiculo.filter( vehiculo => vehiculo.obtenerplca()==cplaca  );    
+    let resultado=baseVehiculo.filter( vehiculo => vehiculo.obtenerplaca()==cplaca  );    
     
     console.log('resultado '+resultado);
     return resultado.length>0;
