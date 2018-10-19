@@ -101,28 +101,28 @@ function Factura(fe,pre,num,c,v)
 		return this.nrofactura;
 	};
 	this.obtenerClienteNombre= function () {
-		return this.cli.nombre;
+		return this.cli.obtenerNombre();
 	}
 	this.obtenerClienteDni= function () {
-		return this.cli.dni;
+		return this.cli.obtenerDni();
 	}
 	this.obtenerVehiculoColor = function () {
-		return this.vehi.color;
+		return this.vehi.obtenerColor();
 	}
 	this.obtenerVehiculoPlaca = function () {
-		return this.vehi.placa;
+		return this.vehi.obtenerPlaca();
 	}
 	this.obtenerVehiculoTipo = function () {
-		return this.vehi.tipo;
+		return this.vehi.obtenerTipo();
 	}
 	this.obtenerVehiculoAño = function () {
-		return this.vehi.año;
+		return this.vehi.obtenerAño();
 	}
 	this.obtenerVehiculoCilindraje = function () {
-		return this.vehi.cilindraje;
+		return this.vehi.obtenerCilindraje();
 	}
 	this.obtenerVehiculoPotencia = function () {
-		return this.vehi.potencia;
+		return this.vehi.obtenerPotencia();
 	}
 	this.cambiarFecha = function (nuevaFecha)
 	{
@@ -132,9 +132,37 @@ function Factura(fe,pre,num,c,v)
 	{
 		 this.fecha = nuevoPrecio;	
 	};
-	this.cambiarNrofactura = function (nuevoNrofactura)
+	this.cambiarClienteNombre = function (nuevoNombre)
 	{
-		 this.fecha = nuevoNrofactura;	
+		 this.cli.cambiarNombre(nuevoNombre);	
+	};
+	this.cambiarClienteDni = function (nuevoDni)
+	{
+		 this.cli.cambiarDni(nuevoDni);	
+	};
+	this.cambiarVehiculoColor = function (nuevoColor)
+	{
+		 this.cli.cambiarColor(nuevoColor);	
+	};
+	this.cambiarVehiculoPlaca = function (nuevaPlaca)
+	{
+		 this.cli.cambiarPlaca(nuevaPlaca);	
+	};
+	this.cambiarVehiculoTipo = function (nuevoTipo)
+	{
+		 this.cli.cambiarTipo(nuevoTipo);
+	};
+	this.cambiarVehiculoAño = function (nuevoAño)
+	{
+		 this.cli.cambiarAño(nuevoAño);	
+	};
+	this.cambiarVehiculoCilindraje = function (nuevoCilindraje)
+	{
+		 this.cli.cambiarCilindraje(nuevoCilindraje);	
+	};
+	this.cambiarVehiculoPotencia = function (nuevaPotencia)
+	{
+		 this.cli.cambiarPotencia(nuevaPotencia);	
 	};
 }
 
