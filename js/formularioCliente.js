@@ -79,3 +79,12 @@ function validarCliente(cdni){
 
 }
 
+function validarCliente(cdni){   
+
+    let resultado=baseCliente.filter( fila  => fila.obtenerDni()==cdni  );
+
+
+    return resultado.length>0;
+
+}
+

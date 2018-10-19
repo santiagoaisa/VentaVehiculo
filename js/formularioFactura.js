@@ -16,3 +16,22 @@ function buscarCliente(){
     }
 
 }
+
+function buscarVehiculo(){
+    
+
+    let placaVehiculo=document.getElementById("placa").value; 
+  
+    if(validarVehiculo(placaVehiculo)){
+        for (const vehiculo of baseVehiculo) {
+            if(vehiculo.obtenerPlaca()==placaVehiculo){
+                document.getElementById("placa").value=vehiculo.obtenerPlaca();
+                document.getElementById("color").value=vehiculo.obtenerColor();
+                document.getElementById("año").value=vehiculo.obtenerAño();
+            }
+        }
+    }else{
+        alert("DNI no Existe");
+    }
+
+}
