@@ -3,7 +3,7 @@ function Vehiculo(co,pla,ti,anio,cili,po)
 	this.color = co;
 	this.placa = pla;
 	this.tipo = ti;
-	this.año = anio;
+	this.ano = anio;
 	this.cilindraje = cili;
 	this.potencia = po;
 

@@ -48,7 +48,7 @@ function modificarVehiculo(cplaca){
 
 function validarVehiculo(cplaca){   
 
-    let resultado=baseVehiculo.filter( vehiculo => vehiculo.obtenerplaca()==cplaca  );    
+    let resultado=baseVehiculo.filter( vehiculo => vehiculo.obtenerPlaca()==cplaca  );    
     
     console.log('resultado '+resultado);
     return resultado.length>0;

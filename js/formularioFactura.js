@@ -20,18 +20,22 @@ function buscarCliente(){
 function buscarVehiculo(){
     
 
-    let placaVehiculo=document.getElementById("placa").value; 
+    let placaVehiculo=document.getElementById("xplaca").value; 
   
     if(validarVehiculo(placaVehiculo)){
         for (const vehiculo of baseVehiculo) {
             if(vehiculo.obtenerPlaca()==placaVehiculo){
-                document.getElementById("placa").value=vehiculo.obtenerPlaca();
-                document.getElementById("color").value=vehiculo.obtenerColor();
-                document.getElementById("año").value=vehiculo.obtenerAño();
+                document.getElementById("xplaca").value=vehiculo.obtenerPlaca();
+                document.getElementById("xcolor").value=vehiculo.obtenerColor();
+                document.getElementById("xaño").value=vehiculo.obtenerAno();
+                document.getElementById("xtipo").value=vehiculo.obtenerCilindraje();
+                document.getElementById("xpotencia").value=vehiculo.obtenerPotencia();
+                document.getElementById("xcilindraje").value=vehiculo.obtenerCilindraje();
+                
             }
         }
     }else{
-        alert("DNI no Existe");
+        alert("Placa no Existe");
     }
 
 }
