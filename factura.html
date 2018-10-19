@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/formulario.js"></script>
+    <script src="js/objetos.js"></script>
+    <title>Ventas</title>
+</head>
+<body>
+  <form>
+  	<table >
+  		<tr>
+        <td><label>DNI Cliente: </label></td>
+        <td><input id="dni" type="text" name=""></td>
+        <td><button>Buscar</button></td>
+      </tr>
+      <tr>
+        <td><label>Nombre Cliente: </label></td></td>
+        <td><input id="nombre" type="text" name=""></td>
+      </tr>
+      <tr>
+        <td><label>Placa Vehículo: </label></td>
+        <td><input id="placa" type="text" name=""></td>
+        <td><button>Buscar</button></td>
+      </tr>
+      <tr>
+        <td><label>Color: </label></td>
+        <td><input id="color" type="text" name=""></td>
+        <td><label>Tipo: </label></td>
+        <td><input id="tipo" type="text" name=""></td>
+        <td><label>Año: </label></td>
+        <td><input id="año" type="text" name=""></td>
+      </tr>
+      <tr>
+        <td><label>Cilindraje: </label></td>
+        <td><input id="cilindraje" type="text" name=""></td>
+        <td><label>Potencia: </label></td>
+        <td><input id="potencia" type="text" name=""></td>
+      </tr>
+      <tr>
+        <td><label>Fecha: </label></td>
+        <td><input id="fecha" type="text" name=""></td>
+        <td><label>Precio: </label></td>
+        <td><input id="precio" type="text" name=""></td>
+        <td><label>Número de Factura: </label></td>
+        <td><input id="numero" type="text" name=""></td>
+      </tr>
+  	</table>
+  	<br>
+  	<input type="reset" onclick="registrarCliente()" value="Registrar">
+  </form>
+<br>
+   	<table border=2 id="tablaCliente" >
+    	<tr>
+    		<th>Nombre</th>
+    		<th>DNI</th>
+        <th>Color</th>
+        <th>Placa</th>
+        <th>Tipo</th>
+        <th>Año</th>
+        <th>Cilindraje</th>
+        <th>Potencia</th>
+        <th>Precio</th>
+        <th>Fecha</th>
+        <th>Número de Factura</th>
+    		<th>Acción</th>
+    	</tr>    	
+    </table>
+
+    
+</body>
+</html>
