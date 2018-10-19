@@ -100,28 +100,36 @@ function Factura(fe,pre,num,c,v)
 	{
 		return this.nrofactura;
 	};
-	this.obtenerClienteNombre= function () {
+	this.obtenerClienteNombre= function () 
+	{
 		return this.cli.obtenerNombre();
 	}
-	this.obtenerClienteDni= function () {
+	this.obtenerClienteDni= function ()
+	 {
 		return this.cli.obtenerDni();
 	}
-	this.obtenerVehiculoColor = function () {
+	this.obtenerVehiculoColor = function ()
+	 {
 		return this.vehi.obtenerColor();
 	}
-	this.obtenerVehiculoPlaca = function () {
+	this.obtenerVehiculoPlaca = function ()
+	 {
 		return this.vehi.obtenerPlaca();
 	}
-	this.obtenerVehiculoTipo = function () {
+	this.obtenerVehiculoTipo = function () 
+	{
 		return this.vehi.obtenerTipo();
 	}
-	this.obtenerVehiculoAño = function () {
+	this.obtenerVehiculoAño = function () 
+	{
 		return this.vehi.obtenerAño();
 	}
-	this.obtenerVehiculoCilindraje = function () {
+	this.obtenerVehiculoCilindraje = function ()
+	 {
 		return this.vehi.obtenerCilindraje();
 	}
-	this.obtenerVehiculoPotencia = function () {
+	this.obtenerVehiculoPotencia = function ()
+	 {
 		return this.vehi.obtenerPotencia();
 	}
 	this.cambiarFecha = function (nuevaFecha)
