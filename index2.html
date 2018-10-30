@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+	<script src="js/formularioCliente.js"></script>
+	<script src="js/formularioVehiculo.js"></script>
+	<script src="js/formularioFactura.js"></script>
+    <script src="js/objetos.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+
+<div>
+
+  <form>
+	<fieldset>
+			<legend>Cliente:</legend>
+		<table >
+				<tr>
+					<td><label>Ingresar Nombre:</label></td>
+					<td><input id="nombrecliente" type="text" name=""></td>
+				</tr>
+				<tr><td><label>Ingresar DNI:</label></td>
+					<td><input id="dnicliente" type="text" name=""></td>
+				</tr>
+			</table>
+			<br>
+			<input type="reset" onclick="registrarCliente()" value="Registrar">
+			<input type="button" onclick="actualizarCliente()" value="Actualizar">
+		
+		<table border=1 id="tablaCliente" >
+		  <tr>
+			  <th>Nombre</th>
+			  <th>DNI</th>
+			  <th>Acción</th>
+		  </tr>    	
+	  </table>
+	</fieldset>
+	</form>
+
+  	
+</div>
+
+<div>
+   	
+	<form>
+		<fieldset>
+					<legend>Vehiculo:</legend>
+
+		<table >
+			<tr>
+				<td><label>Ingresar color:</label></td>
+				<td><input id="color" type="text" name=""></td>
+			</tr>
+			<tr><td><label>Ingresar placa:</label></td>
+				<td><input id="placa" type="text" name=""></td>
+			</tr>
+			<tr><td><label>Ingresar tipo:</label></td>
+				<td><input id="tipo" type="text" name=""></td>
+			</tr>
+			<tr><td><label>Ingresar ano:</label></td>
+				<td><input id="ano" type="text" name=""></td>
+			</tr>
+			<tr><td><label>Ingresar cilindraje:</label></td>
+				<td><input id="cilindraje" type="text" name=""></td>
+			</tr>
+			<tr><td><label>Ingresar potencia:</label></td>
+				<td><input id="potencia" type="text" name=""></td>
+			</tr>
+			
+		</table>
+		
+		<input type="reset" onclick="registrarVehiculo()" value="Registrar">
+		<input type="button" onclick="actualizarVehiculo()" value="Actualizar">
+		
+		 <table border=1 id="tablaVehiculo" >
+		  <tr>
+			  <th>color</th>
+			  <th>placa</th>
+			  <th>tipo</th>
+			  <th>ano</th>
+			  <th>cilindraje</th>
+			  <th>potencia</th>
+		  </tr>    	
+	  </table>
+
+	</fieldset>
+	</form>
+</div>
+
+<div>
+	<form>
+		<fieldset>
+					<legend>Factura:</legend>
+
+		<table >
+			<tr>
+		  <td><label>DNI Cliente: </label></td>
+		  <td><input id="dni" type="text"  name=""></td>
+		  <td><button type="button" onclick="buscarCliente()">Buscar</button></td>
+		</tr>
+		<tr>
+		  <td><label>Nombre Cliente: </label></td></td>
+		  <td><input id="nombre" type="text" disabled="true" name=""></td>
+		</tr>
+		<tr>
+		  <td><label>Placa Vehículo: </label></td>
+		  <td><input id="xplaca" type="text" name=""></td>
+		  <td><button type="button" onclick="buscarVehiculo()">Buscar</button></td>
+		</tr>
+		<tr>
+		  <td><label>Color: </label></td>
+		  <td><input id="xcolor" type="text" disabled="true" name=""></td>
+		  <td><label>Tipo: </label></td>
+		  <td><input id="xtipo" type="text" disabled="true" name=""></td>
+		  <td><label>Año: </label></td>
+		  <td><input id="xaño" type="text" disabled="true" name=""></td>
+		</tr>
+		<tr>
+		  <td><label>Cilindraje: </label></td>
+		  <td><input id="xcilindraje" type="text" disabled="true" name=""></td>
+		  <td><label>Potencia: </label></td>
+		  <td><input id="xpotencia" type="text" disabled="true" name=""></td>
+		</tr>
+		<tr>
+		  <td><label>Fecha: </label></td>
+		  <td><input id="fecha" type="text" name=""></td>
+		  <td><label>Precio: </label></td>
+		  <td><input id="precio" type="text" name=""></td>
+		  <td><label>Número de Factura: </label></td>
+		  <td><input id="numero" type="text" name=""></td>
+		</tr>
+		</table>
+		
+		<input type="reset" onclick="registrarCliente()" value="Registrar">
+
+		</fieldset>
+	
+	</form>
+  <br>
+		 <table border=2 id="tablaCliente" >
+		  <tr>
+			  <th>Nombre</th>
+			  <th>DNI</th>
+		  <th>Color</th>
+		  <th>Placa</th>
+		  <th>Tipo</th>
+		  <th>Año</th>
+		  <th>Cilindraje</th>
+		  <th>Potencia</th>
+		  <th>Precio</th>
+		  <th>Fecha</th>
+		  <th>Número de Factura</th>
+			  <th>Acción</th>
+		  </tr>    	
+	  </table>
+</div>
+    
+</body>
+</html>
