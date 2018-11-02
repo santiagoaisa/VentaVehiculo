@@ -1,5 +1,61 @@
-div {
-   
-    display: block;
-    float: left;
+/*
+Normalize
+*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*
+Estilo del Menu
+*/
+nav a{
+    text-decoration: none;   
+    color: #000;
+    font: 15px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    color: #fff;
+    
+}
+
+
+nav li{
+    list-style-type: none;
+    display: inline-block;
+    text-align: center;
+    background: #E37D00;
+    width: 100px;
+    
+}
+
+nav a:hover,nav a:active{
+
+	background: #000000;
+	box-shadow:none;
+	-moz-box-shadow:none;
+	-webkit-box-shadow:none;
+}
+
+/*
+Estilo de la tabla
+*/
+
+.divTabla{
+    width:60%;
+    margin: auto;
+}
+
+table {
+    width:100%;
+    text-align:left;
+    border-collapse:collapse;
+    caption-side:top;
+} 
+
+caption,td,th{
+    padding:0.3em;
+}
+
+th,td{
+    border:1px solid #000;
 }

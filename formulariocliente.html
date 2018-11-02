@@ -5,59 +5,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/formulario.css">
-    <link rel="stylesheet" href="css/modal.css">
+
     <title>Registro de Cliente</title>
 
-    <script src="js/formularioCliente.js"></script>
     <script src="js/cliente.js"></script>
-    
-
+    <script src="js/formularioCliente.js"></script>
+  
 </head>
 
 <body>
 
     <header>
-         
-            <div class="form-style-heading">Registro de Clientes</div>
+
+        <header>
+            <nav>
+                <ul class="no-style horizontal">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="formulariocliente.html">Clientes</a></li>
+                    <li><a href="formulariovehiculo.html">Vehiculos</a></li>
+                    <li><a href="formulariofactura.html">Factura</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="form-style-heading">Registro de Clientes</div>
     </header>
 
-    <div id="openModal" class="modalDialog">
-            <div>
-                <a href="#close" title="Close" class="close">X</a>
-          
+    <div>
+
         <form>
             <ul class="form-style">
-                    
+
                 <li>
                     <label>Documento de Identidad<span class="required">*</span></label>
-                    <input type="text" name="txtDni" class="field-divided"
-                        placeholder="Ingrese el número de su DNI" required/>                       
+                    <input type="text" id="txtDni" class="field-divided" placeholder="Ingrese el número de su DNI"
+                        required />
                 </li>
                 <li>
                     <label>Nombre<span class="required">*</span></label>
-                    <input type="text" name="txtNombre" class="field-divided"
-                        placeholder="Ingrese su Nombre"  required/>                       
+                    <input type="text" id="txtNombre" class="field-divided" placeholder="Ingrese su Nombre" required />
                 </li>
                 <li>
-                    <input type="submit" value="Registrar" />
-                   
+                    <input id="btnRegistrar" type="reset" onclick="registrar()" value="Registrar" />
+
                 </li>
             </ul>
         </form>
 
-        
     </div>
-</div>
-    
-    <footer>
 
-            <a href="#openModal">Lanzar el modal</a>
+    <div class="divTabla">
+        <table id="tablaCliente">
+            <tr>
+                <th>Nombre</th>
+                <th>DNI</th>
+                <th>Acción</th>
+            </tr>
+        </table>
+    </div>
 
-            
-
-    </footer>
 
 </body>
 
